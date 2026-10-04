@@ -1,0 +1,6 @@
+{
+ "claim": "papers/03-davenport-heilbronn-lambda/claims.md#2",
+ "method": "Arb bisection of 1 - sum_{n>=2}|a_n| n^-sigma; de Bruijn strip theorem",
+ "output": "kappa = [0.2840790438404122960282918323931261691 +/- 3.72e-38]\nsigma0 upper = [1.3951361582351097223135232657118272888 +/- 1.56e-38]  S(sigma0) = [0.999999999999999996005492472733539915 +/- 2.21e-37]\nDelta = [1.7902723164702194446270465314236545776 +/- 3.12e-38]  Lambda_DH <= Delta^2/2 = [1.6025374835598227822712495131042768973 +/- 3.96e-38]\n \n",
+ "independent_check": "Python with python-flint/arb_eval of S(139514/100000) - 1 at 256 bits"
+}

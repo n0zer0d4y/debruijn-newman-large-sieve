@@ -1,0 +1,9 @@
+# command: python deep_zeros.py 0.704 20   (Python 3.12, python-flint 0.8.0, mpmath 1.3.0)
+a(1) = 9.4536724e-5, a(2) = 0.7042856, a(3) = -1.5823975
+two-term balance sigma0 = 12.862998
+k=1  start (12.863, 4.53236)  zero (12.86741358, 4.549225363)  |f| = 3.5e-36
+k=2  start (12.863, 13.5971)  zero (12.84989818, 13.58457531)  |f| = 6.68e-36
+
+real	0m1.267s
+user	0m0.062s
+sys	0m0.031s

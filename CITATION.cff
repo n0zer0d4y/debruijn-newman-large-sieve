@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use these results or this code, please cite it as below."
+title: "debruijn-newman-large-sieve: three results on the large sieve with prime moduli and the de Bruijn-Newman constant"
+abstract: >-
+  (1) The log log Q factor in Wolke's large sieve inequality with prime moduli is necessary, answering
+  a question of Iwaniec (2022). (2) The de Bruijn-Newman constant is unbounded on the family of Dirichlet
+  series sharing the functional equation of L(s, chi_-7). (3) The de Bruijn-Newman constant of the
+  Davenport-Heilbronn function exceeds 0.23 (certified); an upper bound of 0.58 is conditional on
+  error-term lemmas that are only sketched. Unrefereed; produced by an autonomous multi-agent research
+  system, with interval-arithmetic certificates and a Lean 4 formalisation of the finite core of (1).
+type: software
+authors:
+  - name: "Nozero Day"
+version: "0.1.0"
+date-released: "2026-10-04"
+license: MIT
+keywords:
+  - large sieve
+  - prime moduli
+  - de Bruijn-Newman constant
+  - Davenport-Heilbronn function
+  - Lean 4

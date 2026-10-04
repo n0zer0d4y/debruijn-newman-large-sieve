@@ -1,0 +1,23 @@
+{
+ "result": "H_{0.30} for f_{1/10} (q = 7, odd Theorem A' family) has exactly one zero in |z - c| < 2e-5, c = 102.08497690108965 - 0.19249494975385603 i; hence Lambda(f_{1/10}) > 0.30",
+ "family": "a_theta = cos(theta) (n/7) + sin(theta) b, b(n) = sqrt2 Re(e^{i psi/2} chi6(n)) (sign: b(1) < 0), chi6(3^k) = e^{i pi k/3}, e^{i psi} = tau(conj chi6)/(i sqrt 7); theta = 1/10",
+ "family_checks": {
+  "selfdual_residual": 8.561472258892653e-46,
+  "orth": 4.057605744475161e-46,
+  "norm_minus_6": 7.520581047490691e-46
+ },
+ "rouche": {
+  "t": 0.3,
+  "R": 0.05,
+  "r": 2e-05,
+  "delta": 1e-05,
+  "H_center_abs_upper": 1.3218367756705147e-14,
+  "d_abs_lower": 3.138070834394902,
+  "M": 197.6755772078007,
+  "lhs_|H-p|_bound": 3.1656572825951206e-05,
+  "rhs_|p|_lower": 6.276141667467967e-05,
+  "ok": true
+ },
+ "method": "code/02-functional-equation-family/x7_cert.py (Arb, prec 160; cert_dh2.certify with the q = 7 xi and tail bound); coefficients as Arb balls containing the exact values",
+ "ceiling": "A statement about a non-multiplicative function with a functional equation; it says nothing about zeta"
+}
