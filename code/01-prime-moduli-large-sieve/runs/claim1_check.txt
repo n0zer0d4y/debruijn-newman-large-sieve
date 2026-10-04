@@ -1,0 +1,7 @@
+# command: python claim1_check.py   (Python 3.12, python-flint 0.8.0, mpmath 1.3.0)
+#points = 1012957  Pi_eta = 120
+k=   1 class size= 120 N=   12000  LS/|a|^2=1.2369e+06  Thm RHS/|a|^2=5.8361e+05  holds=True  min|S|/(2N/pi)=1.0027  Remark3 ratio=0.762 (k/phi=1.000)
+k=   2 class size= 120 N=   24000  LS/|a|^2=2.4443e+06  Thm RHS/|a|^2=1.1575e+06  holds=True  min|S|/(2N/pi)=1.0027  Remark3 ratio=1.450 (k/phi=2.000)
+k=   6 class size=  64 N=   72000  LS/|a|^2=3.8351e+06  Thm RHS/|a|^2=1.7216e+06  holds=True  min|S|/(2N/pi)=1.0027  Remark3 ratio=2.130 (k/phi=3.000)
+k=  30 class size=  17 N=  360000  LS/|a|^2=4.7160e+06  Thm RHS/|a|^2=2.1338e+06  holds=True  min|S|/(2N/pi)=1.0497  Remark3 ratio=2.286 (k/phi=3.750)
+k= 210 class size=   5 N= 2520000  LS/|a|^2=9.6651e+06  Thm RHS/|a|^2=2.4682e+06  holds=True  min|S|/(2N/pi)=1.1049  Remark3 ratio=2.704 (k/phi=4.375)

@@ -1,0 +1,8 @@
+# command: python chi7_pair.py 47 55 0.05   (Python 3.12, python-flint 0.8.0, mpmath 1.3.0)
+imag-part check at T1: 1.7e-25
+zeros: ['47.2985853403', '49.2358942624', '50.9830994349', '51.2966314584', '53.2465567164']
+gaps: ['1.93731', '1.74721', '0.313532', '1.94993']
+
+real	0m3.142s
+user	0m0.015s
+sys	0m0.046s

@@ -1,0 +1,4 @@
+# command: python drift_check.py   (Python 3.12, python-flint 0.8.0, mpmath 1.3.0)
+704/1000      sigma0 = 12.862998  Re phi'(s1) = 1.36101  predicted drift = 1.0144  tracked = 1.0134  ratio = 0.99896
+70406/10^5    sigma0 = 18.540798  Re phi'(s1) = 1.52873  predicted drift = 1.1822  tracked = 1.1817  ratio = 0.99965
+a(1) = 1e-10  sigma0 = 32.713497  Re phi'(s1) = 1.80274  predicted drift = 1.4562  tracked = 1.456  ratio = 0.99992

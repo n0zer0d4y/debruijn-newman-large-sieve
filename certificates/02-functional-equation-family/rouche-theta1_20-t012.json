@@ -1,0 +1,35 @@
+{
+ "result": "H_{0.12} for f_{1/20} (q = 7, odd Theorem A' family) has exactly one zero in |z - c| < 1e-05, c = 102.20308183651599 -0.188818102813186 i; hence Lambda(f_{1/20}) > 0.12",
+ "family": "a_theta = cos(theta) (n/7) + sin(theta) b, b(n) = sqrt2 Re(e^{i psi/2} chi6(n)) (sign: b(1) < 0), chi6(3^k) = e^{i pi k/3}, e^{i psi} = tau(conj chi6)/(i sqrt 7); theta = 1/20",
+ "family_checks": {
+  "selfdual_residual": 8.561472258892653e-46,
+  "orth": 4.057605744475161e-46,
+  "norm_minus_6": 7.520581047490691e-46
+ },
+ "rouche": {
+  "t": 0.12,
+  "R": 0.05,
+  "r": 1e-05,
+  "H_center_abs_upper": 4.377939160257308e-15,
+  "d_abs_lower": 2.645611326833535,
+  "M": 131.97001825344427,
+  "lhs": 5.280923441656338e-06,
+  "rhs": 2.6456113263957413e-05,
+  "ok": true
+ },
+ "center": [
+  102.20308183651599,
+  -0.188818102813186
+ ],
+ "W": 20.0,
+ "coefficients_mid": [
+  0.0,
+  0.9398996331711263,
+  0.9942738218692584,
+  -1.062077326144514,
+  1.062077326144514,
+  -0.9942738218692584,
+  -0.9398996331711263
+ ],
+ "method": "code/02-functional-equation-family/x7_cert.py (Arb, prec 160; cert_dh2.certify with the q = 7 xi and tail bound), run locally"
+}

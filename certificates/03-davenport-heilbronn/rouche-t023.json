@@ -1,0 +1,40 @@
+{
+ "claim": "papers/03-davenport-heilbronn-lambda/claims.md#1",
+ "method": "Rouche certificate, Arb (python-flint 0.8.0), code/03-davenport-heilbronn/cert_dh2.py",
+ "runs": [
+  {
+   "t": 0.22,
+   "center": [
+    480.6959411390449,
+    -0.14620587779148794
+   ],
+   "r": 4e-05,
+   "R": 0.05,
+   "H_center_abs_upper": 1.1324653336484713e-13,
+   "d_abs_lower": 7.060085078087424,
+   "M": 214.4272155056759,
+   "lhs": 0.0001374807018453929,
+   "rhs": 0.0002824034030102504,
+   "ok": true,
+   "conclusion": "H_t has exactly one zero in |z - c| < r, non-real; hence Lambda_DH > 0.22",
+   "secs": 43.1
+  },
+  {
+   "t": 0.23,
+   "center": [
+    480.6905586243965,
+    -0.034860443562428206
+   ],
+   "r": 1e-05,
+   "R": 0.05,
+   "H_center_abs_upper": 9.168341911808645e-14,
+   "d_abs_lower": 1.708754573597568,
+   "M": 247.05154568791983,
+   "lhs": 9.8865099415029e-06,
+   "rhs": 1.7087545644292262e-05,
+   "ok": true,
+   "conclusion": "H_t has exactly one zero in |z - c| < r, non-real; hence Lambda_DH > 0.23",
+   "secs": 74.1
+  }
+ ]
+}
