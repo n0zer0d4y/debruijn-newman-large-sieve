@@ -13,16 +13,16 @@ Three results in analytic number theory, on the large sieve with prime moduli an
 - **The question.** Wolke proved the large sieve inequality with prime moduli up to an extra factor log log Q. Iwaniec (Rev. Mat. Iberoam. 38 (2022), 2337–2354) writes: "We do not know if the bound (1.3) holds true without the factor log log Q for general coefficients."
 - **The answer.** It cannot be removed. For N = Q^{2−2θ} with 0 < θ < 1/2, the optimal constant is at least (2θe^γ/π² + o(1)) log log Q · Q²/log(Q/√N).
 - **The method.** A "primorial spoke" construction: Farey fractions with prime denominators accumulate near b/k for a primorial k. The method is that of Baier–Lynch–Zhao (square moduli) and Corrigan (quadratic moduli). The new point is its application to prime moduli.
-- **Rigor.** A written, elementary proof. Its finite arithmetic core (three lemmas) is machine-checked in Lean 4 ([`lean/`](lean/)). The analytic steps (Jordan's inequality, the prime number theorem, Mertens' theorem) are not formalised.
+- **Rigor.** A written, elementary proof. Its finite arithmetic core (the spoke identity, the numerator bounds and the pigeonhole step) is machine-checked in Lean 4 ([`lean/`](lean/)). The analytic steps (Jordan's inequality, the prime number theorem, Mertens' theorem) are not formalised.
 
 ### 2. The de Bruijn–Newman constant is unbounded on a family with one fixed functional equation
 
 [`papers/02-lambda-unbounded-functional-equation-family/`](papers/02-lambda-unbounded-functional-equation-family/main.md)
 
-- **The family.** The real Dirichlet series with exactly the functional equation of L(s, χ₋₇) form a circle f_θ, with the L-function itself at θ = 0.
-- **Theorem U** (written proof, not formalised). Λ(f_θ) → ∞ as θ → θ\*, the angle at which the first Dirichlet coefficient vanishes. So a functional equation alone places no upper bound on Λ.
+- **The family.** The real Dirichlet series with exactly the functional equation of L(s, χ₋₇) form a circle f\_θ, with the L-function itself at θ = 0.
+- **Theorem U** (written proof, not formalised). Λ(f\_θ) → ∞ as θ → θ\*, the angle at which the first Dirichlet coefficient vanishes. So a functional equation alone places no upper bound on Λ.
 - **Certified,** by interval-arithmetic Rouché certificates:
-  - Λ > 24.5, 30 and 44 as a_θ(1) → 0;
+  - Λ > 24.5, 30 and 44 as a\_θ(1) → 0;
   - near the L-function, Λ > 0.30, 0.12, 0.06 and 0.02 at θ = 1/10, 1/20, 3/100 and 1/50.
 - **Conditional:** Λ is upper semicontinuous at the L-function. The proof is complete except for one lemma (uniform far-field dominance), which is only sketched.
 - **Numerical:** a two-zero "pair-collision law" predicts, with no fitted parameter, where the off-line zeros near the L-function appear.
@@ -32,8 +32,8 @@ Three results in analytic number theory, on the large sieve with prime moduli an
 [`papers/03-davenport-heilbronn-lambda/`](papers/03-davenport-heilbronn-lambda/main.md)
 
 - **Why this function.** The Davenport–Heilbronn function satisfies a Riemann-type functional equation but has zeros off the critical line.
-- **Certified:** Λ_DH > 0.23, by an interval-arithmetic Rouché certificate for a non-real zero of the heat-flowed function.
-- **Conditional:** Λ_DH ≤ 0.58.
+- **Certified:** Λ\_DH > 0.23, by an interval-arithmetic Rouché certificate for a non-real zero of the heat-flowed function.
+- **Conditional:** Λ\_DH ≤ 0.58.
   - The method is the Polymath effective heat-flow approximation, transferred to this function through a Riemann–Siegel-type identity ([`papers/supporting/riemann-siegel-identity/`](papers/supporting/riemann-siegel-identity/)), plus a rectangle winding certificate.
   - The computation is interval arithmetic, but several error-term lemmas are not yet written out in full (open items O1–O4 of [`derivation.md`](papers/supporting/riemann-siegel-identity/derivation.md)).
 - **Context.** Dobner (Acta Arith. 201 (2021)) proved Λ ≥ 0 for the extended Selberg class, which contains these functions. He gave no upper bounds or numerical values.
@@ -85,7 +85,7 @@ Every claim carries a rigor grade in its paper's `claims.md`; see [`docs/verific
 - **proved:** a Lean theorem, kernel-checked, depending only on `propext`, `Classical.choice` and `Quot.sound`.
 - **certificate / numeric-experiment:** rigorous interval (Arb) arithmetic, reproducible from `code/`.
 - **reference:** a published result.
-- **conjectural:** a written proof that is not formalised, or a claim resting on lemmas that are only sketched. Theorem U, the semicontinuity theorem and the bound Λ_DH ≤ 0.58 are in this class.
+- **conjectural:** a written proof that is not formalised, or a claim resting on lemmas that are only sketched. Theorem U, the semicontinuity theorem and the bound Λ\_DH ≤ 0.58 are in this class.
 
 ## Prior art
 

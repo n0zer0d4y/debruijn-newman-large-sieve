@@ -15,7 +15,7 @@ lake build
 lake env lean AxiomCheck.lean
 ```
 
-`AxiomCheck.lean` prints the axioms each theorem depends on. Every one should be among `propext`, `Classical.choice` and `Quot.sound`, with no `sorryAx`. `scripts/setup-shared-deps.ps1` can instead point `.lake/packages` at a shared Mathlib store on Windows.
+`AxiomCheck.lean` prints the axioms each of the seven theorems depends on (the four main theorems and the three witnesses). Every one should be among `propext`, `Classical.choice` and `Quot.sound`, with no `sorryAx`. `scripts/setup-shared-deps.ps1` can instead point `.lake/packages` at a shared Mathlib store on Windows.
 
 The numerical illustration of main.md Remark 3 comes from `python code/01-prime-moduli-large-sieve/claim1_check.py` (output in `code/01-prime-moduli-large-sieve/runs/claim1_check.txt`).
 

@@ -111,7 +111,7 @@ because Σ|a\_n|² = N.
 
 ## Scope
 
-- This is a written proof. It is elementary, using only the pigeonhole principle, the prime number theorem, Mertens' theorem and Jordan's inequality. Its arithmetic core (the spoke identity, 1 ≤ a\_p < p, and the pigeonhole step) is formalised in Lean (claims #3); the analytic steps are not.
+- This is a written proof. It is elementary, using only the pigeonhole principle, the prime number theorem, Mertens' theorem and Jordan's inequality. Its arithmetic core is formalised in Lean (claims #3, `lean/DebruijnNewmanLargeSieve/PrimeSpoke.lean`): the spoke identity (`spoke_point`), the numerator bounds 1 ≤ a\_p < p (`spoke_bounds`) and the pigeonhole step with the exact bound #𝒫\_c ≥ #𝒫/φ(k) (`exists_rich_class_rat`), with witnesses that apply them to concrete data (`spoke_example`, `rich_class_example`). The analytic steps are not formalised.
 - **Novelty: plausibly new, not established.**
   - Iwaniec states the question as open, and for Theorem 1 cites only Wolke's papers [Wo71, Wo71b].
   - Baier [Ba25] and Baier–Lynch–Zhao [BLZ19] record no prime-moduli lower bound, and neither does Corrigan [Co26].
