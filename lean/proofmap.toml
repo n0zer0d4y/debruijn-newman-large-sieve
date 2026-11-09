@@ -1,0 +1,18 @@
+# Settings for the interactive proof map, proofmap.html (https://github.com/n0zer0d4y/proofmap).
+# Regenerate it with `proofmap build` in this folder.
+
+[project]
+title = "The prime-moduli large sieve: the Lean core"
+
+# The main results the page opens on: the theorems behind the "proved" claim in
+# papers/01-prime-moduli-large-sieve/claims.md (claim 3). The spoke_hyps_satisfiable,
+# spoke_example and rich_class_example witnesses stay on the page, below them.
+roots = [
+  # Result 1, claim 3: the spoke identity a/p = b/k + 1/(kp)
+  "DebruijnNewmanLargeSieve.PrimeSpoke.spoke_point",
+  # Result 1, claim 3: the numerator bounds 1 <= a < p
+  "DebruijnNewmanLargeSieve.PrimeSpoke.spoke_bounds",
+  # Result 1, claim 3: the pigeonhole over reduced classes with the exact rational bound #s/phi(k),
+  # as used in Step 1 of the paper (the natural-division form exists_rich_class is on the page too)
+  "DebruijnNewmanLargeSieve.PrimeSpoke.exists_rich_class_rat",
+]

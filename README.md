@@ -1,6 +1,9 @@
 # debruijn-newman-large-sieve
 
-Three results in analytic number theory, on the large sieve with prime moduli and on the de Bruijn–Newman constant Λ. Each comes with a written argument, interval-arithmetic certificates where computation is involved, and reproduction code. The finite core of the first result is also formalised in a small Lean 4 library.
+[![proofmap: browse the Lean proofs](https://img.shields.io/badge/proofmap-browse_the_Lean_proofs-1e7b45?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHBhdGggZD0iTTcgMTZoN00xOCA5aDdNMTggMjNoN00xNCAxNmw0LTdNMTQgMTZsNCA3IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIi8+PC9zdmc+)](https://n0zer0d4y.github.io/debruijn-newman-large-sieve/lean/proofmap.html)
+[![Lean 4](https://img.shields.io/badge/Lean_4-v4.28.0_%2B_Mathlib-blue)](lean/lean-toolchain)
+
+Three results in analytic number theory, on the large sieve with prime moduli and on the de Bruijn–Newman constant Λ. Each comes with a written argument, interval-arithmetic certificates where computation is involved, and reproduction code. The finite core of the first result is also formalised in a small Lean 4 library, which you can [browse as an interactive proof map](#browsing-the-lean-proofs).
 
 > **Status: unrefereed.** These results were produced autonomously by AI agents running inside a custom research harness; a human set the goals and decided what to publish. No human expert has reviewed them yet; such review is very welcome. Literature searches (September–October 2026) found none of these results in print. That is evidence of novelty, not proof of it; see [Prior art](#prior-art).
 
@@ -58,7 +61,7 @@ papers/                       one folder per result
 certificates/                 interval-arithmetic certificate files (JSON)
 code/                         the Python scripts that produce the certificates, with the outputs of our runs
   shared-dirichlet-pipeline/  modules shared by the result-3 code
-lean/                         Lake package DebruijnNewmanLargeSieve (Lean 4 + Mathlib)
+lean/                         Lake package DebruijnNewmanLargeSieve (Lean 4 + Mathlib), and proofmap.html, its interactive proof map (settings in proofmap.toml)
 docs/                         reproducing.md, verification.md
 ```
 
@@ -78,6 +81,8 @@ The last command re-derives the certificate for Λ(f\_{1/10}) > 0.30 in about 30
 cd lean && lake exe cache get && lake build && lake env lean AxiomCheck.lean
 ```
 
+To regenerate the proof map, install [proofmap](https://github.com/n0zer0d4y/proofmap) and run `proofmap build` in `lean/`.
+
 ## How much to trust each claim
 
 Every claim carries a rigor grade in its paper's `claims.md`; see [`docs/verification.md`](docs/verification.md).
@@ -86,6 +91,17 @@ Every claim carries a rigor grade in its paper's `claims.md`; see [`docs/verific
 - **certificate / numeric-experiment:** rigorous interval (Arb) arithmetic, reproducible from `code/`.
 - **reference:** a published result.
 - **conjectural:** a written proof that is not formalised, or a claim resting on lemmas that are only sketched. Theorem U, the semicontinuity theorem and the bound Λ\_DH ≤ 0.58 are in this class.
+
+## Browsing the Lean proofs
+
+**[Open the proof map](https://n0zer0d4y.github.io/debruijn-newman-large-sieve/lean/proofmap.html)** to review the Lean library in your browser, without installing Lean. The page was generated from the compiled library by [proofmap](https://github.com/n0zer0d4y/proofmap). It shows:
+
+- **Map:** the main theorems and the lemmas and definitions they rest on.
+- **Outline:** the formalisation as a table of contents, with each result's docstring.
+- **Health:** a check that nothing depends on `sorry` or on an axiom outside `propext`, `Classical.choice` and `Quot.sound`. This is the same check as `AxiomCheck.lean`, extended to every declaration.
+- **Path finder:** how a given definition reaches a given theorem.
+
+Each declaration shows its statement and source, with a link to its lines here on GitHub. The page is a single offline file, [`lean/proofmap.html`](lean/proofmap.html). To read it offline, download it and open it in any browser; it loads nothing from the network.
 
 ## Prior art
 
